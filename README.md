@@ -13,7 +13,7 @@
 ## Screenshot
 
 ![HomePage](/screenshots/home.png)
-Promptopia HoemPage.
+Promptopia HomePage.
 
 ## Installation
 
