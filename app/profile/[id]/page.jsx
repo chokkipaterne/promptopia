@@ -1,24 +1,26 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Profile from '@components/Profile';
 
-const MyProfile = () => {
+const MyProfile = ({ params }) => {
   const router = useRouter();
   const { data: session } = useSession();
   const [prompts, setPrompts] = useState([]);
+  const userId = params.id;
+  const searchParams = useSearchParams();
+  const username = searchParams.get('username');
 
   useEffect(() => {
     const fetchPrompts = async () => {
-      const response = await fetch(`/api/users/${session?.user.id}/prompts`);
+      const response = await fetch(`/api/users/${userId}/prompts`);
       const data = await response.json();
       setPrompts(data);
       console.log(data);
     };
-    console.log(session?.user);
-    if (session?.user.id) fetchPrompts();
-  }, []);
+    fetchPrompts();
+  }, [userId]);
 
   const handleEdit = (prompt) => {
     router.push(`/update-prompt?id=${prompt._id}`);
@@ -45,8 +47,8 @@ const MyProfile = () => {
   };
   return (
     <Profile
-      name='My'
-      desc='Welcome to your personnalized profile page'
+      name={username}
+      desc={`Welcome to ${username} profile page`}
       prompts={prompts}
       handleEdit={handleEdit}
       handleDelete={handleDelete}
