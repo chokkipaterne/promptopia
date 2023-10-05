@@ -10,6 +10,11 @@
 - **Share Your Prompts**: Contribute your unique prompts and get feedback from the community.
 - **User-Friendly Interface**: Easily navigate and search for specific prompts based on tags.
 
+## Screenshot
+
+![HomePage](/screenshots/home.png)
+Promptopia HoemPage.
+
 ## Installation
 
 1. Clone this repository:
