@@ -1,4 +1,4 @@
-# Promptopia: Discover & Share AI Prompts 🧠✍️
+# Promptopia: Discover & Share AI Prompts
 
 ## Introduction
 
@@ -23,17 +23,22 @@ Promptopia HomePage.
 git clone https://github.com/yourusername/promptopia.git
 ```
 
-2. Create NEXTAUTH_SECRET using command line
-   openssl rand -base64 32
-   OR use cryptool.org/en/cto/openssl
+2. Create NEXTAUTH_SECRET using command line on your PC or cryptool.org/en/cto/openssl
 
-3. create file .env and setup the following environmment variables:
+```bash
+openssl rand -base64 32
+```
+
+3. Create file .env and setup the following environmment variables:
+
+```bash
    GOOGLE_ID=
    GOOGLE_CLIENT_SECRET=
    MONGODB_URI=
-   NETAUTH_URL=http://localhost:3000
-   NETAUTH_URL_INTERNAL=http://localhost:3000
-   NETAUTH_SECRET=
+   NEXTAUTH_URL=http://localhost:3000
+   NEXTAUTH_URL_INTERNAL=http://localhost:3000
+   NEXTAUTH_SECRET=
+```
 
 4. Navigate to the project directory and install the required packages:
 
