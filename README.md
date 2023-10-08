@@ -12,6 +12,8 @@
 
 ## Screenshot
 
+Demo accessible at https://promptopia-drab-alpha.vercel.app/
+
 ![HomePage](/screenshots/home.png)
 Promptopia HomePage.
 
