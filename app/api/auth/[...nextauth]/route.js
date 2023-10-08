@@ -36,10 +36,9 @@ const handler = NextAuth({
             image: profile.picture,
           });
         }
-
         return true;
       } catch (error) {
-        comsole.log(error);
+        console.log(error);
         return false;
       }
     },

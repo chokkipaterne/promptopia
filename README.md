@@ -23,15 +23,26 @@ Promptopia HomePage.
 git clone https://github.com/yourusername/promptopia.git
 ```
 
-2. Navigate to the project directory and install the required packages:
+2. Create NEXTAUTH_SECRET using command line
+   openssl rand -base64 32
+   OR use cryptool.org/en/cto/openssl
+
+3. create file .env and setup the following environmment variables:
+   GOOGLE_ID=
+   GOOGLE_CLIENT_SECRET=
+   MONGODB_URI=
+   NETAUTH_URL=http://localhost:3000
+   NETAUTH_URL_INTERNAL=http://localhost:3000
+   NETAUTH_SECRET=
+
+4. Navigate to the project directory and install the required packages:
 
 ```bash
 cd promptopia
 npm init
-
 ```
 
-3. Run the application:
+5. Run the application:
 
 ```bash
 npm run dev
