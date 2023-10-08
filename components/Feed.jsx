@@ -1,7 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
 import PromptCard from './PromptCard';
-import { connectToDB } from '@utils/database';
 
 const PromptCardList = ({ prompts, handleTagClick }) => {
   return (
@@ -31,7 +30,7 @@ const Feed = () => {
 
   useEffect(() => {
     const fetchPrompts = async () => {
-      const response = await fetch('/api/prompt', { next: { revalidate: 10 } });
+      const response = await fetch('/api/prompt');
       const data = await response.json();
       setPrompts(data);
     };
