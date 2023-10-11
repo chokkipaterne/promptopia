@@ -1,6 +1,7 @@
 import { connectToDB } from '@utils/database';
 import Prompt from '@models/prompt';
 
+//to force vercel to not consider this file as static but as dynamic
 export const dynamic = 'force-dynamic';
 
 export const GET = async (req) => {
